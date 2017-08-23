@@ -7,7 +7,7 @@ typedef struct _seqence_t {
 	std::string name;
 	unsigned int divider;
 } sequence_t;
-//ряды номиналов
+//СЂСЏРґС‹ РЅРѕРјРёРЅР°Р»РѕРІ
 static sequence_t sequence[] =
 { { 0, "NUL", 0 } ,
 {1, "E192", 1} ,
