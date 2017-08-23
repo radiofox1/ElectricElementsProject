@@ -11,33 +11,33 @@ ConnectorFactory::ConnectorFactory() {
 }
 
 int ConnectorFactory::InputData(vector<ElectricElements> &elementList) {
-	cout << "Íàçâàíèå?" << endl;
+	cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ?" << endl;
 	readStringFromKeyboard(name);
-	cout << "Êîëè÷åñòâî êîíòàêòîâ?" << endl;
+	cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÐºÐ¾Ð½Ñ‚Ð°ÐºÑ‚Ð¾Ð²?" << endl;
 	readStringFromKeyboard(pin);
-	cout << "×àñòü ðàçúåìà (Ø - âèëêà, Ã - ðîçåòêà)?" << endl;
+	cout << "Ð§Ð°ÑÑ‚ÑŒ Ñ€Ð°Ð·ÑŠÐµÐ¼Ð° (Ð¨ - Ð²Ð¸Ð»ÐºÐ°, Ð“ - Ñ€Ð¾Ð·ÐµÑ‚ÐºÐ°)?" << endl;
 	readStringFromKeyboard(contype);
-	cout << "Ïîêðûòèå êîíòàêòîâ?" << endl;
+	cout << "ÐŸÐ¾ÐºÑ€Ñ‹Ñ‚Ð¸Ðµ ÐºÐ¾Ð½Ñ‚Ð°ÐºÑ‚Ð¾Ð²?" << endl;
 	readStringFromKeyboard(covering);
-	cout << "Êëèìàòè÷åñêîå èñïîëíåíèå?" << endl;
+	cout << "ÐšÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ Ð¸ÑÐ¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ?" << endl;
 	readStringFromKeyboard(climat);
-	cout << "ÒÓ?" << endl;
+	cout << "Ð¢Ð£?" << endl;
 	readStringFromKeyboard(tu);
-	cout << "Ïðîèçâîäèòåëü?" << endl;
+	cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ?" << endl;
 	readStringFromKeyboard(manufacturer);
-	cout << "Êîðïóñ?" << endl;
+	cout << "ÐšÐ¾Ñ€Ð¿ÑƒÑ?" << endl;
 	readStringFromKeyboard(package);
-	cout << "Íàçâàíèå ñèìâîëà â áèáëèîòåêå (Library Ref)?" << endl;
+	cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ð° Ð² Ð±Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÐµ (Library Ref)?" << endl;
 	readStringFromKeyboard(libraryref);
-	cout << "Ïóòü ê ñèìâîëó â áèáëèîòåêå (Library Path)?" << endl;
+	cout << "ÐŸÑƒÑ‚ÑŒ Ðº ÑÐ¸Ð¼Ð²Ð¾Ð»Ñƒ Ð² Ð±Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÐµ (Library Path)?" << endl;
 	readStringFromKeyboard(librarypath);
-	cout << "Íàçâàíèå ïîñàäî÷íîãî ìåñòà â áèáëèîòåêå (Footprint Ref)?" << endl;
+	cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð¿Ð¾ÑÐ°Ð´Ð¾Ñ‡Ð½Ð¾Ð³Ð¾ Ð¼ÐµÑÑ‚Ð° Ð² Ð±Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÐµ (Footprint Ref)?" << endl;
 	readStringFromKeyboard(footprintref);
-	cout << "Íàçâàíèå âòîðîãî ïîñàäî÷íîãî ìåñòà â áèáëèîòåêå, åñëè îíî åñòü (Footprint Ref 2)?" << endl;
+	cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð²Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð¿Ð¾ÑÐ°Ð´Ð¾Ñ‡Ð½Ð¾Ð³Ð¾ Ð¼ÐµÑÑ‚Ð° Ð² Ð±Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÐµ, ÐµÑÐ»Ð¸ Ð¾Ð½Ð¾ ÐµÑÑ‚ÑŒ (Footprint Ref 2)?" << endl;
 	readStringFromKeyboard(footprintref2);
-	cout << "Ïóòü ê ïîñàäî÷íîìó ìåñòó â áèáëèîòåêå (Footprint Path)?" << endl;
+	cout << "ÐŸÑƒÑ‚ÑŒ Ðº Ð¿Ð¾ÑÐ°Ð´Ð¾Ñ‡Ð½Ð¾Ð¼Ñƒ Ð¼ÐµÑÑ‚Ñƒ Ð² Ð±Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÐµ (Footprint Path)?" << endl;
 	readStringFromKeyboard(footprintpath);
-	cout << "Ïóòü ê äîêóìåíòàöèè íà êîìïîíåíò?" << endl;
+	cout << "ÐŸÑƒÑ‚ÑŒ Ðº Ð´Ð¾ÐºÑƒÐ¼ÐµÐ½Ñ‚Ð°Ñ†Ð¸Ð¸ Ð½Ð° ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚?" << endl;
 	readStringFromKeyboard(PDF);
 
 	return GenerateComponents(elementList);
@@ -107,11 +107,11 @@ void Connector::GenerateString(void)
 {
 	string determinator = ";";
 	stringstream data;
-	data << "Ðàçúåì " << GetName() << "-" << GetPin() <<
-		"-" << GetContype() << " " << GetCovering() << GetClimat() << GetTU() << " ÒÓ";
+	data << "Ð Ð°Ð·ÑŠÐµÐ¼ " << GetName() << "-" << GetPin() <<
+		"-" << GetContype() << " " << GetCovering() << GetClimat() << GetTU() << " Ð¢Ð£";
 	data << determinator << GetName() << "-" << GetPin() << "-";
 	data << determinator << GetContype() << " " << GetCovering() << GetClimat();
-	data << determinator << GetTU() << " ÒÓ";
+	data << determinator << GetTU() << " Ð¢Ð£";
 	data << determinator << GetPin();
 	data << determinator;
 	data << determinator << GetName();
@@ -128,3 +128,4 @@ void Connector::GenerateString(void)
 
 	SetCsvString(data.str());
 }
+
