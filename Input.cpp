@@ -1,5 +1,3 @@
-
-
 #include "Input.h"
 
 #define UNDO_MARK '$'
@@ -9,17 +7,17 @@ bool getSequenceType(sequence_t &seqType)
 	cin.sync();
 	cin.clear();
 	size_t secNumber = sizeof(sequence) / sizeof(sequence_t);
-	//отображаем все известные последовательности
+	//РѕС‚РѕР±СЂР°Р¶Р°РµРј РІСЃРµ РёР·РІРµСЃС‚РЅС‹Рµ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё
 	for (size_t i = 1; i < secNumber; ++i) {
 		cout << sequence[i].name << ":" << i << ", ";
 	}
 	std::string line;
-	if (seqType.pos) {//если есть, отображаем последнюю имеющуюся
+	if (seqType.pos) {//РµСЃР»Рё РµСЃС‚СЊ, РѕС‚РѕР±СЂР°Р¶Р°РµРј РїРѕСЃР»РµРґРЅСЋСЋ РёРјРµСЋС‰СѓСЋСЃСЏ
 		cout << "[" << seqType.name << "]" << endl;
 	}
 	getline(cin, line);
 	if (line.empty()) {
-		return true;//Переиспользуем старые значения
+		return true;//РџРµСЂРµРёСЃРїРѕР»СЊР·СѓРµРј СЃС‚Р°СЂС‹Рµ Р·РЅР°С‡РµРЅРёСЏ
 	}
 	else {
 		if (line[0] == UNDO_MARK)
@@ -36,7 +34,7 @@ bool getSequenceType(sequence_t &seqType)
 			}
 			else
 			{
-				cout << "Значениие '" << temp << "'недопустимо" << endl;
+				cout << "Р—РЅР°С‡РµРЅРёРёРµ '" << temp << "'РЅРµРґРѕРїСѓСЃС‚РёРјРѕ" << endl;
 			}
 		}
 	}
@@ -54,12 +52,12 @@ bool readStringFromKeyboard(string &data)
 	}
 	getline(cin, line);
 	if (line.empty()) {
-		return true;//Переиспользуем старые значения
+		return true;//РџРµСЂРµРёСЃРїРѕР»СЊР·СѓРµРј СЃС‚Р°СЂС‹Рµ Р·РЅР°С‡РµРЅРёСЏ
 	}
 	else {
 		if (data[0] == UNDO_MARK)
 			return false;
-		data = line;//копируем новое значение
+		data = line;//РєРѕРїРёСЂСѓРµРј РЅРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
 	}
 	return true;
 }
@@ -80,10 +78,10 @@ void readFromKeyboard(vector<T> &elements) {
 	}
 	getline(cin, line);
 	if (line.empty()) {
-		return;//Переиспользуем старые значения
+		return;//РџРµСЂРµРёСЃРїРѕР»СЊР·СѓРµРј СЃС‚Р°СЂС‹Рµ Р·РЅР°С‡РµРЅРёСЏ
 	}
 	else {
-		elements.clear();//очищаем и заново
+		elements.clear();//РѕС‡РёС‰Р°РµРј Рё Р·Р°РЅРѕРІРѕ
 	}
 	std::istringstream iss(line);
 	while (iss >> elementPtr)
@@ -95,7 +93,7 @@ void readFromKeyboard(vector<T> &elements) {
 		}
 		else
 		{
-			cout << "Значениие '" << elementPtr << "'недопустимо" << endl;
+			cout << "Р—РЅР°С‡РµРЅРёРёРµ '" << elementPtr << "'РЅРµРґРѕРїСѓСЃС‚РёРјРѕ" << endl;
 		}
 	}
 
@@ -118,13 +116,13 @@ bool readDoubleFromKeyboard(vector<double> &elements)
 	}
 	getline(cin, line);
 	if (line.empty()) {
-		return true;//Переиспользуем старые значения
+		return true;//РџРµСЂРµРёСЃРїРѕР»СЊР·СѓРµРј СЃС‚Р°СЂС‹Рµ Р·РЅР°С‡РµРЅРёСЏ
 	}
 	else {
 		if (line[0] == UNDO_MARK)
 			return false;
 
-		elements.clear();//очищаем и заново
+		elements.clear();//РѕС‡РёС‰Р°РµРј Рё Р·Р°РЅРѕРІРѕ
 	}
 	std::istringstream iss(line);
 	while (iss >> elementPtr)
@@ -136,7 +134,7 @@ bool readDoubleFromKeyboard(vector<double> &elements)
 		}
 		/*else
 		{
-			cout << "Значениие '" << elementPtr << "'недопустимо" << endl;
+			cout << "Р—РЅР°С‡РµРЅРёРёРµ '" << elementPtr << "'РЅРµРґРѕРїСѓСЃС‚РёРјРѕ" << endl;
 		} */
 	}
 	return true;
@@ -158,13 +156,13 @@ bool readIntFromKeyboard(vector<int> &elements)
 	}
 	getline(cin, line);
 	if (line.empty()) {
-		return true;//Переиспользуем старые значения
+		return true;//РџРµСЂРµРёСЃРїРѕР»СЊР·СѓРµРј СЃС‚Р°СЂС‹Рµ Р·РЅР°С‡РµРЅРёСЏ
 	}
 	else {
 		if (line[0] == UNDO_MARK)
 			return false;
 
-		elements.clear();//очищаем и заново
+		elements.clear();//РѕС‡РёС‰Р°РµРј Рё Р·Р°РЅРѕРІРѕ
 	}
 	std::istringstream iss(line);
 	while (iss >> elementPtr)
@@ -176,7 +174,7 @@ bool readIntFromKeyboard(vector<int> &elements)
 		}
 		/*else
 		{
-			cout << "Значениие '" << elementPtr << "'недопустимо" << endl;
+			cout << "Р—РЅР°С‡РµРЅРёРёРµ '" << elementPtr << "'РЅРµРґРѕРїСѓСЃС‚РёРјРѕ" << endl;
 		} */
 	}
 	return true;
@@ -185,7 +183,7 @@ bool readIntFromKeyboard(vector<int> &elements)
 void GetIndexAndSize(double data, int &index, int &size) {
 	if (data < 1) {
 
-		size = 0;//не умеем в такую мелочь
+		size = 0;//РЅРµ СѓРјРµРµРј РІ С‚Р°РєСѓСЋ РјРµР»РѕС‡СЊ
 	}
 	else {
 		size = 0;
@@ -195,7 +193,7 @@ void GetIndexAndSize(double data, int &index, int &size) {
 				size += 1;
 			}
 		}
-		//находим номер индекса:
+		//РЅР°С…РѕРґРёРј РЅРѕРјРµСЂ РёРЅРґРµРєСЃР°:
 		while ((_value[index] + .000001) < data) {
 			index++;
 		}
