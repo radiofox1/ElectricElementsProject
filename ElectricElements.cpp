@@ -23,9 +23,9 @@ static double _value[] = {
 		6.34, 6.42, 6.49, 6.57, 6.65, 6.73, 6.81, 6.90, 6.98, 7.06, 7.15,
 		7.23, 7.32, 7.41, 7.50, 7.59, 7.68, 7.77, 7.87, 7.96, 8.06, 8.16,
 		8.25, 8.35, 8.45, 8.56, 8.66, 8.76, 8.87, 8.98, 9.09, 9.20, 9.31, 
-		9.42, 9.53, 9.65, 9.76, 9.88 }; //инициализация массива значений согласно ряду Е192
+		9.42, 9.53, 9.65, 9.76, 9.88 }; ////РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РјР°СЃСЃРёРІР° Р·РЅР°С‡РµРЅРёР№ СЃРѕРіР»Р°СЃРЅРѕ СЂСЏРґСѓ Р•192
 
-//инициализация члена класса
+//РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ С‡Р»РµРЅР° РєР»Р°СЃСЃР°
 double GetValue(int index)
 {
 	return _value[index];
@@ -78,13 +78,13 @@ ElectricElements::ElectricElements (
 
 		
 	string determinator = ";";
-	//шапка таблицы в выходном файле
+	//С€Р°РїРєР° С‚Р°Р±Р»РёС†С‹ РІ РІС‹С…РѕРґРЅРѕРј С„Р°Р№Р»Рµ
 	hdrString = "Part Number" + determinator + "Name1" + determinator + "Name2" + determinator + "TU" + determinator + "Base Par" + determinator + "Add_Atr" +
 		determinator + "ValueGOST" + determinator + "Value" + determinator + "Library Ref" + determinator + "Library Path" + determinator + "Footprint Ref"
 		+ determinator + "Footprint Ref 2"  + determinator + "Footprint Path" + determinator + "PDF" + determinator + "Manufacturer" + determinator + 
 		"ManufacturerEn" + determinator + "Provider";
 }
-//функции получения новых значений
+//С„СѓРЅРєС†РёРё РїРѕР»СѓС‡РµРЅРёСЏ РЅРѕРІС‹С… Р·РЅР°С‡РµРЅРёР№
 void ElectricElements::SetType(string _type)
 {
 	type = _type;
@@ -248,6 +248,6 @@ string ElectricElements::GetWordTKE() const
 void ElectricElements::Print() {
 
 
-	std::cout << "Тип: " << type << ", Имя: " << name << ", ТУ: " << TU << ", " << value << ", " << voltage << ", " << tolerance << std::endl;
+	std::cout << "Г’ГЁГЇ: " << type << ", Г€Г¬Гї: " << name << ", Г’Г“: " << TU << ", " << value << ", " << voltage << ", " << tolerance << std::endl;
 
 }
