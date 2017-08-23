@@ -32,7 +32,7 @@ enum CapacitorInputDataSteps
 	ECapEnd
 };
 
-//Вывод запросов на экран
+//Р’С‹РІРѕРґ Р·Р°РїСЂРѕСЃРѕРІ РЅР° СЌРєСЂР°РЅ
 int CapacitorFactory::InputData(vector<ElectricElements> &elementList) 
 {
 	int curStep = ECapName;
@@ -42,83 +42,83 @@ int CapacitorFactory::InputData(vector<ElectricElements> &elementList)
 		switch (curStep)
 		{
 		case ECapName:
-		cout << "Название?" << endl;
+		cout << "РќР°Р·РІР°РЅРёРµ?" << endl;
 		readStringFromKeyboard(name);
 		readResult = true;
 		break;
 
 		case ECapSequence:
-		cout << "Ряд номинальных значений? (выберите цифру):" << endl;
+		cout << "Р СЏРґ РЅРѕРјРёРЅР°Р»СЊРЅС‹С… Р·РЅР°С‡РµРЅРёР№? (РІС‹Р±РµСЂРёС‚Рµ С†РёС„СЂСѓ):" << endl;
 		readResult = getSequenceType(seqType);
 		break;
 
 		case ECapVoltage:
-		cout << "Напряжение? (Массив элементов)" << endl;
+		cout << "РќР°РїСЂСЏР¶РµРЅРёРµ? (РњР°СЃСЃРёРІ СЌР»РµРјРµРЅС‚РѕРІ)" << endl;
 		readResult = readIntFromKeyboard(voltage);
 		break;
 
 		case ECapTKE:
-		cout << "ТКЕ? (Буквенное обозначение)" << endl;
+		cout << "РўРљР•? (Р‘СѓРєРІРµРЅРЅРѕРµ РѕР±РѕР·РЅР°С‡РµРЅРёРµ)" << endl;
 		readResult = readStringFromKeyboard(stringtke);
 		break;
 
 		case ECapTol:
-		cout << "Допуск? (Массив элементов)" << endl;
+		cout << "Р”РѕРїСѓСЃРє? (РњР°СЃСЃРёРІ СЌР»РµРјРµРЅС‚РѕРІ)" << endl;
 		readResult = readDoubleFromKeyboard(tolerance);
 		break;
 
 		case ECapMinMax:
-		cout << "Минимальное и максимальная емкость" << endl;
+		cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Рё РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ РµРјРєРѕСЃС‚СЊ" << endl;
 		readResult = readDoubleFromKeyboard(minmax);
 		break;
 
 		case ECapPerf:
-		cout << "Климатическое исполнение?" << endl;
+		cout << "РљР»РёРјР°С‚РёС‡РµСЃРєРѕРµ РёСЃРїРѕР»РЅРµРЅРёРµ?" << endl;
 		readResult = readStringFromKeyboard(performance);
 		break;
 
 		case ECapTU:
-		cout << "ТУ?" << endl;
+		cout << "РўРЈ?" << endl;
 		readResult = readStringFromKeyboard(tu);
 		break;
 
 		case ECapDev:
-		cout << "Производитель?" << endl;
+		cout << "РџСЂРѕРёР·РІРѕРґРёС‚РµР»СЊ?" << endl;
 		readResult = readStringFromKeyboard(manufacturer);
 		break;
 
 		case ECapCase:
-		cout << "Корпус?" << endl;
+		cout << "РљРѕСЂРїСѓСЃ?" << endl;
 		readResult = readStringFromKeyboard(package);
 		break;
 
 		case ECapLibraryRef:
-		cout << "Название символа в библиотеке (Library Ref)?" << endl;
+		cout << "РќР°Р·РІР°РЅРёРµ СЃРёРјРІРѕР»Р° РІ Р±РёР±Р»РёРѕС‚РµРєРµ (Library Ref)?" << endl;
 		readResult = readStringFromKeyboard(libraryref);
 		break;
 
 		case ECapLibraryPath:
-		cout << "Путь к символу в библиотеке (Library Path)?" << endl;
+		cout << "РџСѓС‚СЊ Рє СЃРёРјРІРѕР»Сѓ РІ Р±РёР±Р»РёРѕС‚РµРєРµ (Library Path)?" << endl;
 		readResult = readStringFromKeyboard(librarypath);
 		break;
 
 		case ECapFootprintRef:
-		cout << "Название посадочного места в библиотеке (Footprint Ref)?" << endl;
+		cout << "РќР°Р·РІР°РЅРёРµ РїРѕСЃР°РґРѕС‡РЅРѕРіРѕ РјРµСЃС‚Р° РІ Р±РёР±Р»РёРѕС‚РµРєРµ (Footprint Ref)?" << endl;
 		readResult = readStringFromKeyboard(footprintref);
 		break;
 
 		case ECapFootprintRef2:
-		cout << "Название второго посадочного места в библиотеке, если оно есть (Footprint Ref 2)?" << endl;
+		cout << "РќР°Р·РІР°РЅРёРµ РІС‚РѕСЂРѕРіРѕ РїРѕСЃР°РґРѕС‡РЅРѕРіРѕ РјРµСЃС‚Р° РІ Р±РёР±Р»РёРѕС‚РµРєРµ, РµСЃР»Рё РѕРЅРѕ РµСЃС‚СЊ (Footprint Ref 2)?" << endl;
 		readResult = readStringFromKeyboard(footprintref2);
 		break;
 
 		case ECapFootprintPath:
-		cout << "Путь к посадочному месту в библиотеке (Footprint Path)?" << endl;
+		cout << "РџСѓС‚СЊ Рє РїРѕСЃР°РґРѕС‡РЅРѕРјСѓ РјРµСЃС‚Сѓ РІ Р±РёР±Р»РёРѕС‚РµРєРµ (Footprint Path)?" << endl;
 		readResult = readStringFromKeyboard(footprintpath);
 		break;
 
 		case ECapDocPath:
-		cout << "Путь к документации на компонент?" << endl;
+		cout << "РџСѓС‚СЊ Рє РґРѕРєСѓРјРµРЅС‚Р°С†РёРё РЅР° РєРѕРјРїРѕРЅРµРЅС‚?" << endl;
 		readResult = readStringFromKeyboard(PDF);
 		break;
 		}
@@ -131,7 +131,7 @@ int CapacitorFactory::InputData(vector<ElectricElements> &elementList)
 int CapacitorFactory::GenerateComponents(vector < ElectricElements> &elementList)
 {
 	if (minmax.size() != 2) {
-		cout << "Ошибка границ сопротивлений" << endl;
+		cout << "РћС€РёР±РєР° РіСЂР°РЅРёС† СЃРѕРїСЂРѕС‚РёРІР»РµРЅРёР№" << endl;
 		return -1;
 	}
 	int _valuetype = 0;
@@ -211,28 +211,28 @@ string Capacitor::RusNominale() {
 	int index = 0;
 	int size = 0;
 	GetIndexAndSize(value, index, size);
-	//приставки номиналов
+	//РїСЂРёСЃС‚Р°РІРєРё РЅРѕРјРёРЅР°Р»РѕРІ
 	switch (size) {
 	case 0:
-		tmp << _value[index] << " пФ";
+		tmp << _value[index] << " РїР¤";
 		break;
 	case 1:
-		tmp << _value[index] * 10 << " пФ";
+		tmp << _value[index] * 10 << " РїР¤";
 		break;
 	case 2:
-		tmp << _value[index] * 100 << " пФ";
+		tmp << _value[index] * 100 << " РїР¤";
 		break;
 	case 3:
-		tmp << _value[index] * 1000 << " пФ";
+		tmp << _value[index] * 1000 << " РїР¤";
 		break;
 	case 4:
-		tmp << _value[index] / 100 << " мкФ";
+		tmp << _value[index] / 100 << " РјРєР¤";
 		break;
 	case 5:
-		tmp << _value[index] / 10 << " мкФ";
+		tmp << _value[index] / 10 << " РјРєР¤";
 		break;
 	case 6:
-		tmp << _value[index]  << " мкФ";
+		tmp << _value[index]  << " РјРєР¤";
 		break;
 
 	}
@@ -245,16 +245,16 @@ void Capacitor::GenerateString(void)
 {
 	string determinator = ";";
 	stringstream data;
-	data << "Конденсатор " << GetName() << "-"
-		<< GetVoltage() << " В" << "-"
+	data << "РљРѕРЅРґРµРЅСЃР°С‚РѕСЂ " << GetName() << "-"
+		<< GetVoltage() << " Р’" << "-"
 		<< RusNominale() << "-" << GetTolerance() << "-"
 		<< GetStringTKE() << "-"  << GetPerformance()
-		<< " " << GetTU() <<  " ТУ";
+		<< " " << GetTU() <<  " РўРЈ";
 	data << determinator << GetName() << "-"
-		<< GetVoltage() << " В" << "-";
+		<< GetVoltage() << " Р’" << "-";
 	data << determinator << GetTolerance() << "-"
 		<< GetStringTKE() << "-" << GetPerformance();
-	data << determinator << GetTU() << " ТУ";
+	data << determinator << GetTU() << " РўРЈ";
 	data << determinator << GetVoltage();
 	data << determinator << GetTolerance();
 	data << determinator << RusNominale();
@@ -271,4 +271,3 @@ void Capacitor::GenerateString(void)
 
 SetCsvString(data.str());
 } 
-
