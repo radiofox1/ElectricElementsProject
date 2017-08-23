@@ -11,33 +11,33 @@ InductorFactory::InductorFactory() {
 }
 
 int InductorFactory::InputData(vector<ElectricElements> &elementList) {
-	cout << "Íàçâàíèå?" << endl;
+	cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ?" << endl;
 	readStringFromKeyboard(name);
-	cout << "Íàïðÿæåíèå (òîê)?" << endl;
+	cout << "ÐÐ°Ð¿Ñ€ÑÐ¶ÐµÐ½Ð¸Ðµ (Ñ‚Ð¾Ðº)?" << endl;
 	readStringFromKeyboard(current);
-	cout << "Íîìèíàëüíîå çíà÷åíèå è ïðèñòàâêà?" << endl;
+	cout << "ÐÐ¾Ð¼Ð¸Ð½Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¸ Ð¿Ñ€Ð¸ÑÑ‚Ð°Ð²ÐºÐ°?" << endl;
 	readStringFromKeyboard(induction);
-	cout << "Êëèìàòè÷åñêîå èñïîëíåíèå?" << endl;
+	cout << "ÐšÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ Ð¸ÑÐ¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ðµ?" << endl;
 	readStringFromKeyboard(inclimat);
-	cout << "Äîïóñê?" << endl;
+	cout << "Ð”Ð¾Ð¿ÑƒÑÐº?" << endl;
 	readStringFromKeyboard(precision);
-	cout << "ÒÓ?" << endl;
+	cout << "Ð¢Ð£?" << endl;
 	readStringFromKeyboard(tu);
-	cout << "Ïðîèçâîäèòåëü?" << endl;
+	cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ?" << endl;
 	readStringFromKeyboard(manufacturer);
-	cout << "Êîðïóñ?" << endl;
+	cout << "ÐšÐ¾Ñ€Ð¿ÑƒÑ?" << endl;
 	readStringFromKeyboard(package);
-	cout << "Íàçâàíèå ñèìâîëà â áèáëèîòåêå (Library Ref)?" << endl;
+	cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÑÐ¸Ð¼Ð²Ð¾Ð»Ð° Ð² Ð±Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÐµ (Library Ref)?" << endl;
 	readStringFromKeyboard(libraryref);
-	cout << "Ïóòü ê ñèìâîëó â áèáëèîòåêå (Library Path)?" << endl;
+	cout << "ÐŸÑƒÑ‚ÑŒ Ðº ÑÐ¸Ð¼Ð²Ð¾Ð»Ñƒ Ð² Ð±Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÐµ (Library Path)?" << endl;
 	readStringFromKeyboard(librarypath);
-	cout << "Íàçâàíèå ïîñàäî÷íîãî ìåñòà â áèáëèîòåêå (Footprint Ref)?" << endl;
+	cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð¿Ð¾ÑÐ°Ð´Ð¾Ñ‡Ð½Ð¾Ð³Ð¾ Ð¼ÐµÑÑ‚Ð° Ð² Ð±Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÐµ (Footprint Ref)?" << endl;
 	readStringFromKeyboard(footprintref);
-	cout << "Íàçâàíèå âòîðîãî ïîñàäî÷íîãî ìåñòà â áèáëèîòåêå, åñëè îíî åñòü (Footprint Ref 2)?" << endl;
+	cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð²Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð¿Ð¾ÑÐ°Ð´Ð¾Ñ‡Ð½Ð¾Ð³Ð¾ Ð¼ÐµÑÑ‚Ð° Ð² Ð±Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÐµ, ÐµÑÐ»Ð¸ Ð¾Ð½Ð¾ ÐµÑÑ‚ÑŒ (Footprint Ref 2)?" << endl;
 	readStringFromKeyboard(footprintref2);
-	cout << "Ïóòü ê ïîñàäî÷íîìó ìåñòó â áèáëèîòåêå (Footprint Path)?" << endl;
+	cout << "ÐŸÑƒÑ‚ÑŒ Ðº Ð¿Ð¾ÑÐ°Ð´Ð¾Ñ‡Ð½Ð¾Ð¼Ñƒ Ð¼ÐµÑÑ‚Ñƒ Ð² Ð±Ð¸Ð±Ð»Ð¸Ð¾Ñ‚ÐµÐºÐµ (Footprint Path)?" << endl;
 	readStringFromKeyboard(footprintpath);
-	cout << "Ïóòü ê äîêóìåíòàöèè íà êîìïîíåíò?" << endl;
+	cout << "ÐŸÑƒÑ‚ÑŒ Ðº Ð´Ð¾ÐºÑƒÐ¼ÐµÐ½Ñ‚Ð°Ñ†Ð¸Ð¸ Ð½Ð° ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚?" << endl;
 	readStringFromKeyboard(PDF);
 
 	return GenerateComponents(elementList);
@@ -107,14 +107,14 @@ void Inductor::GenerateString(void)
 {
 	string determinator = ";";
 	stringstream data;
-	data << "Êàòóøêà èíäóêòèâíîñòè " << GetName() << "-" << GetCurrent() <<
+	data << "ÐšÐ°Ñ‚ÑƒÑˆÐºÐ° Ð¸Ð½Ð´ÑƒÐºÑ‚Ð¸Ð²Ð½Ð¾ÑÑ‚Ð¸ " << GetName() << "-" << GetCurrent() <<
 		 "-" << GetInduction() << "+-" << GetPrecision() << "%" << 
-		"-" << GetInclimat() << " " << GetTU() << " ÒÓ";
+		"-" << GetInclimat() << " " << GetTU() << " Ð¢Ð£";
 	data << determinator << GetName() << "-" << GetCurrent() <<
 		"-";
 	data << determinator << GetInduction() << "+-" << GetPrecision() << "%" <<
 		"-" << GetInclimat();
-	data << determinator << GetTU() << " ÒÓ";
+	data << determinator << GetTU() << " Ð¢Ð£";
 	data << determinator << GetCurrent();
 	data << determinator << "+-" << GetPrecision() << "%";
 	data << determinator << GetInduction();
